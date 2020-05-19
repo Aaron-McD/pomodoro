@@ -5,15 +5,25 @@ html {
 
 h1 {
     font-size: 30px;
-    color: #8a8a8a;
+    color: #030303;
     text-align: center;
     margin-top: 200px;
+    margin-bottom: 5px;
 }
 
 p {
     font-size: 20px;
-    color: #8a8a8a;
+    color: #030303;
     text-align: center;
+}
+
+p a {
+    color: #030303;
+}
+
+p a:hover {
+    cursor: pointer;
+    font-weight: bolder;
 }
 
 .ico {
@@ -72,8 +82,10 @@ p {
 h3 {
     text-align: center;
     font-size: 30px;
+    margin-bottom: 8px;
 }
 
 #time p {
     font-size: 40px;
+    color: white;
 }
