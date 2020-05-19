@@ -1,0 +1,60 @@
+html {
+    font-family: 'Orbitron', sans-serif;
+    background-color: #626262;
+}
+
+h1 {
+    font-size: 30px;
+    color: #8a8a8a;
+    text-align: center;
+    margin-top: 200px;
+}
+
+p {
+    font-size: 20px;
+    color: #8a8a8a;
+    text-align: center;
+}
+
+.ico {
+    color: white;
+}
+
+.clock-option p {
+    color: white;
+}
+
+.clock-option {
+    display: flex;
+    justify-content: space-evenly;
+    font-size: 24px;
+}
+
+.option-area {
+    width: 46%;
+}
+
+.option-box h2 {
+    color: white;
+    text-align: center;
+    font-weight: 900;
+    margin-bottom: 7px;
+    font-size: 20px;
+}
+
+.option-box {
+    background-color: black;
+    display: flex;
+    justify-content: space-evenly;
+    padding: 20px 20px 12px 20px;
+}
+
+#pomodoro-clock{
+    margin: auto;
+    width: 400px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 150px;
+    margin-top: 30px;
+}
