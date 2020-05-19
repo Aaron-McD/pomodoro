@@ -1,13 +1,63 @@
 <!DOCTYPE html>
 <html>
-    <head>
-        <title>Pomodoro Timer</title>
-        <meta charset="utf-8">
-        <link href="reset.css" rel="stylesheet" type="text/css">
-        <link href="styles.css" rel="stylesheet" type="text/css">
-    </head>
-    <body>
-        <h1>This should be small</h1>
-    </body>
-    <script src="scripts.js"></script>
+
+<head>
+    <title>Pomodoro Timer</title>
+    <meta charset="utf-8">
+    <link href="reset.css" rel="stylesheet" type="text/css">
+    <link href="styles.css" rel="stylesheet" type="text/css">
+</head>
+
+<body>
+    <header>
+        <h1>Pomodoro Clock</h1>
+        <p>This is a simple Pomodoro Clock. Which an <a href="https://www.theodinproject.com/courses/web-development-101/lessons/pairing-project">Assignment</a> in the Odin Project for working in pairs</p>
+    </header>
+    <section id="session-break">
+        <div class="left" id="session">
+            <div class="ico" id="ico-down-left">
+                <img src="" alt="">
+            </div>
+            <div id="numLeft" class="number">
+                <p>25</p>
+            </div>
+            <div class="ico" id="ico-up-left">
+                <img src="" alt="">
+            </div>
+        </div>
+        <div class="right" id="break">
+            <div class="ico" id="ico-down-right">
+                <img src="" alt="">
+            </div>
+            <div id="numRight" class="number">
+                <p>25</p>
+            </div>
+            <div class="ico" id="ico-up-right">
+                <img src="" alt="">
+            </div>
+        </div>
+
+    </section>
+    <section id="session">
+        <div id="playIco">
+            <img src="" alt="">
+        </div>
+        <div id="replayIco">
+            <img src="" alt="">
+        </div>
+        <h3>Session</h3>
+        <div id="time">
+            <p>23:23</p>
+        </div>
+        <div id="pauseIco">
+            <img src="" alt="">
+        </div>
+        <div id="stopIco">
+            <img src="" alt="">
+        </div>
+
+    </section>
+</body>
+<script src="scripts.js"></script>
+
 </html>
