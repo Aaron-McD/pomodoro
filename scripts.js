@@ -51,7 +51,7 @@ breakIconDown.addEventListener("click", () => {
 })
 
 function incrementTimer() {
-    if(seconds > 0) {
+    if (seconds > 0) {
         seconds--;
         secondsText.textContent = (seconds > 9) ? seconds : '0' + seconds;
     } else {
@@ -67,19 +67,22 @@ function incrementTimer() {
 }
 
 playButton.addEventListener('click', () => {
-    minutesText.textContent = (origMinutues > 9) ? origMinutues : '0' + origMinutues;
-    secondsText.textContent = (origSeconds > 9) ? origSeconds : '0' + origSeconds;
-    minutes = origMinutues;
-    seconds = origSeconds;
+    /*minutesText.textContent = (origMinutues > 9) ? origMinutues : '0' + origMinutues;
+    secondsText.textContent = (origSeconds > 9) ? origSeconds : '0' + origSeconds;*/
+    minutes = parseInt(minutesText.textContent);
+    seconds = parseInt(secondsText.textContent);
     let increment = setInterval(function() {
         incrementTimer();
     }, 1000);
-    resetButton.addEventListener('click', () => {
+    stopIco.addEventListener('click', () => {
         clearInterval(increment);
         minutesText.textContent = (origMinutues > 9) ? origMinutues : '0' + origMinutues;
         secondsText.textContent = (origSeconds > 9) ? origSeconds : '0' + origSeconds;
         minutes = origMinutues;
         seconds = origSeconds;
     });
+    pauseIco.addEventListener('click', () => {
+        clearInterval(increment);
+    })
 
 });
