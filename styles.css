@@ -26,6 +26,10 @@ p a:hover {
     font-weight: bolder;
 }
 
+.fas:hover {
+    color: rgb(63, 61, 61);
+}
+
 .ico {
     color: white;
 }

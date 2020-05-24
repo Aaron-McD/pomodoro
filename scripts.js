@@ -8,7 +8,7 @@ let minutes = 0;
 let seconds = 0;
 
 function incrementTimer() {
-    if(seconds > 1) {
+    if(seconds > 0) {
         seconds--;
         secondsText.textContent = (seconds > 9) ? seconds : '0' + seconds;
     } else {
