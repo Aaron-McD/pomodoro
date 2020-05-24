@@ -2,17 +2,60 @@ const secondsText = document.querySelector('#seconds');
 const minutesText = document.querySelector('#minutes');
 const playButton = document.querySelector('#playIco');
 const resetButton = document.querySelector('#replayIco');
-let origMinutues = 25;
-let origSeconds = 0;
+
+const sessionIconDown = document.querySelector('#ico-down-left');
+const sessionIconUp = document.querySelector('#ico-up-left');
+const breakIconDown = document.querySelector('#ico-down-right');
+const breakIconUp = document.querySelector('#ico-up-right');
+
+const pausIco = document.querySelector('#pauseIco');
+const stopIco = document.querySelector('#stopIco');
+
+let sessionIconNum = document.querySelector('#sessionNum');
+let breakNum = document.querySelector('#breakNum');
+
+
 let minutes = 0;
 let seconds = 0;
 
+let sessionNumVar = 45;
+let breakNumVar = 10;
+
+let origMinutues = sessionNumVar;
+let origSeconds = 0;
+
+sessionIconNum.textContent = sessionNumVar;
+breakNum.textContent = breakNumVar;
+minutesText.textContent = sessionNumVar;
+secondsText.textContent = (origSeconds > 9) ? origSeconds : '0' + origSeconds;
+
+
+sessionIconUp.addEventListener("click", () => {
+
+    sessionNum.textContent = ++origMinutues;
+    minutesText.textContent = origMinutues;
+})
+
+sessionIconDown.addEventListener("click", () => {
+
+    sessionNum.textContent = --origMinutues;
+    minutesText.textContent = origMinutues;
+})
+
+breakIconUp.addEventListener("click", () => {
+    breakNum.textContent = breakNumVar++;
+})
+
+breakIconDown.addEventListener("click", () => {
+    breakNum.textContent = breakNumVar--;
+})
+
 function incrementTimer() {
-    if(seconds > 1) {
+    if (seconds > 1) {
         seconds--;
         secondsText.textContent = (seconds > 9) ? seconds : '0' + seconds;
     } else {
-        if(minutes == 0){
+        if (minutes == 0) {
             return false;
         } else {
             minutes--;
@@ -20,15 +63,15 @@ function incrementTimer() {
             seconds = 59;
             secondsText.textContent = seconds;
         }
-    } 
+    }
 }
 
-playButton.addEventListener('click', () => { 
+playButton.addEventListener('click', () => {
     minutesText.textContent = (origMinutues > 9) ? origMinutues : '0' + origMinutues;
     secondsText.textContent = (origSeconds > 9) ? origSeconds : '0' + origSeconds;
     minutes = origMinutues;
     seconds = origSeconds;
-    let increment = setInterval(function(){
+    let increment = setInterval(function() {
         incrementTimer();
     }, 1000);
     resetButton.addEventListener('click', () => {
@@ -37,5 +80,6 @@ playButton.addEventListener('click', () => {
         secondsText.textContent = (origSeconds > 9) ? origSeconds : '0' + origSeconds;
         minutes = origMinutues;
         seconds = origSeconds;
-    });  
-}); 
+    });
+
+});
