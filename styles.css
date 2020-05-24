@@ -4,11 +4,15 @@ html {
 }
 
 h1 {
-    font-size: 30px;
+    font-size: 50px;
     color: #030303;
     text-align: center;
     margin-top: 200px;
-    margin-bottom: 5px;
+    margin-bottom: 15px;
+}
+
+h3 {
+    margin-top: 10px;
 }
 
 p {
@@ -24,6 +28,32 @@ p a {
 p a:hover {
     cursor: pointer;
     font-weight: bolder;
+}
+
+#footer {
+    background-color: black;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    color: white;
+    margin: auto;
+}
+
+.links {
+    display: flex;
+    justify-content: space-evenly;
+}
+
+.link:hover {
+    color: gray;
+    font-weight: bolder;
+}
+
+.link {
+    text-decoration: none;
+    color: white;
+    font-size: 20px;
+    padding: 20px;
 }
 
 .fas:hover {
